@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "lib": ["DOM", "ES5"],
+    "esModuleInterop": true,
+    "target": "es6",
+    "outDir": "out",
+    "types": ["node", "jest"],
+    "rootDir": "src",
+    "noStrictGenericChecks": true,
+    "baseUrl": "./src",
+    "strictNullChecks": true,
+    "watch": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
