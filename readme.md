@@ -15,7 +15,7 @@ Les design pattern. C'est l'occasion pour moi de monter en compétence sur ces s
 
 - Membre
     * Authentification (name, email, password)
-    * Peut suivre d'autres membres : follow() followBack()
+    * Peut suivre d'autres membres : follow(), followBack()
     
     
 - Catégorie de blog
@@ -24,10 +24,13 @@ Les design pattern. C'est l'occasion pour moi de monter en compétence sur ces s
     
     
 - Articles/sujets
-    * Ajouter un article (titre)
+    * Ajouter un article (titre, contenu)
     * Supprimer un article
-    * Ajouter des commentaires
-    * Afficher des commentaires
+    * Lister les articles par catégories
+  
+- Interactions et commentaires
+  * Ajouter un commentaire sur un article posté
+  * Supprimer / Modifier un commentaire 
 
 
 
