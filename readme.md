@@ -11,26 +11,33 @@ du devOPs et bien d'autres.
 Il serait important de mettre l'accent sur l'aspect craft dont le TDD, la clean architecture,
 Les design pattern. C'est l'occasion pour moi de monter en compétence sur ces sujets afin de perfectionner ma technique et mes hards skills.
 
-## Fonctionnels & techniques
+## Fonctionnels
 
-- Membre
-    * Authentification (name, email, password)
-    * Peut suivre d'autres membres : follow(), followBack()
-    
-    
-- Catégorie de blog
-    * Ajouter une catégorie (titre)
-    * Supprimer une catégorie 
-    
-    
-- Articles/sujets
-    * Ajouter un article (titre, contenu)
+- Utilisateur
+    * Creer un utilisateur
+    * Mettre à jour un utilisateur
+    * afficher un / plusieurs utilisateur.s
+    * Authentifier un utilisateur par email
+
+
+- Articles 
+    * Ajouter un article (id, titre, contenu, date, catégorie)
+    * modifier la catégorie d'un article
     * Supprimer un article
     * Lister les articles par catégories
-  
-- Interactions et commentaires
-  * Ajouter un commentaire sur un article posté
+
+
+- Catégorie de l'article
+    * Ajouter une catégorie (id, libelle)
+    * Supprimer une catégorie 
+    
+
+- Commentaire
+  * Ajouter un commentaire (id, contenu, date, id_user, id_article)
   * Supprimer / Modifier un commentaire 
 
 
+- Evenements
+    * S'abonner / se désabonner
+    * Vote up / down sur un commentaire
 
