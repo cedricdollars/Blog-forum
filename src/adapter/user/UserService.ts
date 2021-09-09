@@ -1,5 +1,5 @@
-import { UserRepository } from "domain/user/entity/port/UserRepository";
-import { User } from "domain/user/entity/User";
+import { UserRepository } from "core/domain/user/port/UserRepository";
+import { User } from "core/domain/user/entity/User";
 
 export class UserService implements UserRepository {
 

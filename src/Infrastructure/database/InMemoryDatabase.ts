@@ -1,16 +1,13 @@
-import { UserRepository } from "domain/user/entity/port/UserRepository";
-import { User } from "domain/user/entity/User";
-import { resolve } from "path/posix";
+import { UserRepository } from "core/domain/user/port/UserRepository";
+import { User } from "core/domain/user/entity/User";
+
 
 export class InMemoryDatabase implements UserRepository {
 
-    private readonly database: Array<User> = [];
+    private readonly data: Array<User> = [];
 
-    createUser(user: User): Promise<void> {
-        this.database.push(user);
-        return new Promise((resolve, reject)=> {
-             resolve();
-        });
+    async createUser(user: User): Promise<void> {
+        this.data.push(user);
     }
 
     findUserByEmail(email: string): Promise<User> {

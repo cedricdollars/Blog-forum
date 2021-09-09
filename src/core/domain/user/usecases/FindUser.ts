@@ -1,4 +1,4 @@
-import { UserRepository } from "../entity/port/UserRepository";
+import { UserRepository } from "../port/UserRepository";
 import { User } from "../entity/User";
 
 export class FindUser {
