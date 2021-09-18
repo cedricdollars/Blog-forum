@@ -1,9 +1,11 @@
+import {UserName} from "../value_objects/UserName";
+import {UserEmail} from "../value_objects/UserEmail";
+
 export class User {
 
     constructor(private id: string,
-        private lastname: string,
-        private firstname: string,
-        private email: string,
+        private userName: UserName,
+        private email: UserEmail,
         private password: string,
         private birthdate: string) { }
 
