@@ -40,4 +40,5 @@ Les design pattern. C'est l'occasion pour moi de monter en compétence sur ces s
 - Evenements
     * S'abonner / se désabonner
     * Vote up / down sur un commentaire
+    * temps de lecture
 

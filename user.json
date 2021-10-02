@@ -1,0 +1,15 @@
+{
+  "id": "684a16b9d26108c87bc91270682377da00bf14ad",
+  "username": {
+    "type": "USERNAME",
+    "value": "cédric"
+  },
+  "useremail": {
+    "type": "USERNAME",
+    "value": "gabyngoune@yahoo.fr"
+  },
+  "password": {
+    "type": "PASSWORD",
+    "value": "toto"
+  }
+}

@@ -1,4 +1,4 @@
-import { UserRepository } from "../port/UserRepository";
+import { UserRepository } from "../repositories/UserRepository";
 import { User } from "../entity/User";
 
 export class UpdateUser {

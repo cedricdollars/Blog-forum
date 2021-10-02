@@ -30,6 +30,8 @@
   },
   "devDependencies": {
     "@types/faker": "^5.5.8",
-    "faker": "^5.5.3"
+    "faker": "^5.5.3",
+    "jest-ts-auto-mock": "^2.0.0",
+    "ts-auto-mock": "3.5.0"
   }
 }
