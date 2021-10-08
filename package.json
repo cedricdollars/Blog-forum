@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "nodemon",
-    "start": "npm run build && node build/server.js",
+    "start": "npm run build && node build/app.js",
     "build": "rimraf ./build && tsc",
     "test": "jest"
   },
@@ -23,6 +23,7 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "jest": "^27.2.0",
+    "mysql2": "^2.3.0",
     "nodemon": "^2.0.12",
     "ts-jest": "^27.0.5",
     "ts-node": "^10.1.0",

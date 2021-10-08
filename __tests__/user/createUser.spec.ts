@@ -7,24 +7,30 @@ import { CreateUSerDTO } from '../../src/domain/user/dto/createUserDTO';
 
 
 describe("Users tests suite",  () => {
-    
-    it("Expect it create a new user", async() => {
 
+    const createFakeUserFactory = (username:string, useremail:string, password:string): UserDTO => {
+        return {
+            id: Math.random().toString(32),
+            username :  nameOf(username),
+            useremail: emailOf(useremail),
+            password: passwordOf(password)
+    }
+}
+    
+    it("should able to create a new user", async() => {
         //GIVEN
-        const user:CreateUSerDTO = { 
-            username: nameOf('cédric'),
-            useremail: emailOf("gabyngoune@yahoo.fr"),
-            password: passwordOf('toto')
-        }
+        const oneUser = createFakeUserFactory("cedric", "cedric.ngoune@redelectric.fr", "redE");
         const userRepository: UserRepository = new InMemoryUserRepository();
         const userSut = new CreateUser(userRepository);
+
         //WHEN
-        const userCreated = await userSut.create(user);
+        const userCreated = await userSut.create(oneUser);
+
         //THEN
         expect(userCreated).toHaveProperty("id");
         expect(userCreated.id).toEqual(expect.any(String));
-
     })
+    
 
 })
 

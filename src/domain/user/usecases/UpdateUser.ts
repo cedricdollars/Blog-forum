@@ -1,16 +1,17 @@
 import { UserRepository } from "../repositories/UserRepository";
 import { User } from "../entity/User";
+import { UserDTO } from "../dto/userDTO";
 
 export class UpdateUser {
 
     constructor(private readonly repository: UserRepository) { }
 
-    updateById(id:string, user:User): Promise<User> {
-        return this.repository.updateUserById(id, user)
+    updateById(id:string, userdto:UserDTO): Promise<UserDTO> {
+        return this.repository.updateUserById(id, userdto)
     }
 
-    updateByEmail(email: string, user: User): Promise<User> {
-        return this.repository.updateUserById(email, user)
+    updateByEmail(email: string, userdto: UserDTO): Promise<UserDTO> {
+        return this.repository.updateUserById(email, userdto)
     }
 
 }

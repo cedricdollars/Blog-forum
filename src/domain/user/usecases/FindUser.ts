@@ -1,5 +1,6 @@
 import { UserRepository } from "../repositories/UserRepository";
 import { User } from "../entity/User";
+import { UserDTO } from "../dto/userDTO";
 
 export class FindUser {
 
@@ -9,7 +10,7 @@ export class FindUser {
         return this.repository.findUserByEmail(email);
     }
 
-    findAll(): Promise<User[]> {
+    findAll(): Promise<UserDTO[]> {
         return this.repository.findAllUser();
     }
 }
