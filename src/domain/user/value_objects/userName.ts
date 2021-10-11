@@ -9,4 +9,9 @@ export function nameOf(value:string): UserName {
         value
     }
 }
-
+export function isValidName(username: string):boolean {
+    if(!/^[a-zA-Z]+$/.test(username)){
+        throw new Error("user name should contain only letter");
+    }
+    return true
+}
