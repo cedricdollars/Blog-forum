@@ -1,10 +1,13 @@
-import { ValueObject } from ".";
+export class UserEmail {
+    value: string
 
-export interface UserEmail extends ValueObject<string> {
-    type:"USERNAME"
+    constructor(value:string) {
+        this.value = value;
+    }
+    static emailOf(value:string): UserEmail {
+        return new UserEmail(value)
 }
-export function emailOf(value:string): UserEmail {
-    return { type: "USERNAME", value}
+
 }
 
 

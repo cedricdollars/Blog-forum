@@ -1,16 +1,25 @@
-import { ValueObject } from ".";
-import {Hasher} from "../crypto/hasher";
-import bcrypt, {hash} from "bcryptjs"
+import {hash} from "bcryptjs"
+import {UserPasswordError} from "../common/Errors/user-password-error";
 
-export interface UserPassword extends ValueObject<string> {
-    type: "PASSWORD"
-}
-export function passwordOf(value:string): UserPassword {
-    return {
-        type: "PASSWORD",
-        value
+
+export class UserPassword {
+    private readonly value:string
+    private minLength: number
+
+    constructor(value:string) {
+        this.value = this.computePassword(value)
+    }
+    private computePassword(password:string):string {
+        if(this.minLength < 3 || this.value === "") {
+            throw new UserPasswordError("Password must be contain at least 3 characters");
+        }
+        return password
+    }
+    static passwordOf(value:string):UserPassword {
+        return new UserPassword(value)
+    }
+    static hashPassword(password:UserPassword):Promise<string> {
+        return hash(password.value, 10)
     }
 }
- export async function hashPassword(value:string) {
-    await hash(value, 10)
-}
+
