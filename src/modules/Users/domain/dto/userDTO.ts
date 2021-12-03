@@ -1,4 +1,4 @@
-import { UserEmail, UserName, UserPassword } from "../value-objects";
+import { UserEmail, UserName, UserPassword } from "../vo";
 
 export interface UserDTO {
     id: string

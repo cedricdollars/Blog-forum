@@ -1,9 +1,8 @@
-import { UserRepository } from "modules/Users/domain/repositories/UserRepository";
 import crypto from 'crypto';
-import { User } from "modules/Users/domain/entity/User";
 import * as fs from 'fs';
-import { UserDTO } from "modules/Users/domain/dto/userDTO";
-import { CreateUSerDTO } from "modules/Users/domain/dto/createUserDTO";
+import {UserDTO} from "../../../domain/dto/userDTO";
+import {CreateUSerDTO} from "../../../domain/dto/createUserDTO";
+import {UserRepository} from "../../../domain/repositories";
 
 export class InMemoryUserRepository implements UserRepository {
     private fileStorage: string = "user.json";
@@ -27,7 +26,7 @@ export class InMemoryUserRepository implements UserRepository {
        return userToCreate
     }
 
-    findUserByEmail(email: string): Promise<User> {
+    findUserByEmail(email: string): Promise<UserDTO> {
         throw new Error("Method not implemented.");
     }
 
@@ -39,7 +38,7 @@ export class InMemoryUserRepository implements UserRepository {
         throw new Error("Method not implemented.");
     }
 
-    updateUserByEmail(email: string, userdto: UserDTO): Promise<User> {
+    updateUserByEmail(email: string, userdto: UserDTO): Promise<UserDTO> {
         throw new Error("Method not implemented.");
     }
 

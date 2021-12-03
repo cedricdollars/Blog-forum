@@ -1,4 +1,5 @@
-import {UserInputError} from "../Errors";
+import {UserInputError} from "../../../../shared/errors/user-input-error";
+
 
 export class UserEmail {
    private readonly value: string

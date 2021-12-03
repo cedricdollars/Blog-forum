@@ -1,13 +1,8 @@
-import express from 'express'
-import {userRoutes} from "../../modules/Users/Infrastructure/http/routes";
+import express, {Request, Response} from "express";
+import {userRouter} from "../../modules/Users/Infrastructure/http/routes";
 
 const routes = express.Router()
 
-routes.get("/", ((req, res) => {
-    return res.json({
-        message: "Yo what's up"
-    })
-}))
-routes.use('/users', userRoutes)
+routes.use('/users', userRouter)
 
 export {routes}

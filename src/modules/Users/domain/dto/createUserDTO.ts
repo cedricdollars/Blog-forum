@@ -1,5 +1,5 @@
-import { UserEmail, UserPassword } from "../value-objects";
-import { UserName } from "../value-objects";
+import { UserEmail, UserPassword } from "../vo";
+import { UserName } from "../vo";
 
 export interface CreateUSerDTO {
     username: UserName

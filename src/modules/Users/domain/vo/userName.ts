@@ -1,4 +1,4 @@
-import {UserInputError} from "../Errors";
+import {UserInputError} from "../../../../shared/errors/user-input-error";
 
 
 export class UserName {
@@ -8,9 +8,9 @@ export class UserName {
         if(value === "") {
             throw new UserInputError("username is required!");
         }
-        if (!/^[a-zA-Z]+$/.test(value)) {
+      /*  if (!/^[-'0-9a-zÀ-ÿ]+$/.test(value)) {
             throw new UserInputError("user name should contain only letter");
-        }
+        }*/
         this.value = value
     }
 

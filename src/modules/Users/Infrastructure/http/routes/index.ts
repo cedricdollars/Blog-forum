@@ -1,11 +1,19 @@
-import express from "express";
-import {CreateUserController} from "../controllers/create-user-controller";
+import express, {Request, Response} from "express";
+import {createUserController} from "../controllers";
+const userRouter = express.Router();
 
-const userRoutes = express.Router();
+userRouter.get("/", ((request: Request, response:Response) => {
+    return response.json('Yo')
+}))
+userRouter
+    .post('/add', async (req,res) => {
+       try {
+           const result = await createUserController.execute(req.body)
+           res.json(result)
 
-userRoutes
-    .post('/create-user',
-        ((req, res) => CreateUserController.execute(req, res) ))
+       }catch (e){
+            console.log(e.message)
+       }
+    })
 
-
-export { userRoutes }
+export { userRouter }

@@ -1,5 +1,6 @@
-import {UserName} from "../../../src/modules/Users/domain/value-objects";
-import {UserInputError} from "../../../src/modules/Users/domain/Errors";
+import {UserName} from "../../../modules/Users/domain/vo";
+import {UserInputError} from "../../../shared/errors/user-input-error";
+
 
 
 describe("UserName validation ", () => {
